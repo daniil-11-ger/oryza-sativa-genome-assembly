@@ -1,0 +1,11 @@
+name: rice_assembly
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - sra-tools
+  - jellyfish
+  - hifiasm
+  - quast
+  - ragtag
+  - augustus=3.5

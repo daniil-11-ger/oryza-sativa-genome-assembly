@@ -44,6 +44,9 @@ Organelle Sorting: Identified and separated chloroplast and mitochondrial genome
 
 Gene Prediction (Augustus): Performed ab initio gene prediction with extrinsic hints specifically for Oryza sativa.
 
+## Website
+https://daniil-11-ger.github.io/oryza-sativa-genome-assembly/
+
 ## Future Directions
 - **Repeat Masking:** Refine the EDTA/RepeatMasker stage for better soft-masking before annotation.
 - **Functional Annotation:** Using BLAST/InterProScan to assign biological functions to the predicted genes.

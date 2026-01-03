@@ -33,5 +33,18 @@ The k-mer analysis is a crucial step in plant genomics. It allows us to:
 # Clone the repository
 git clone [https://github.com/ВАШ_НИК/oryza-sativa-genome-assembly.git](https://github.com/ВАШ_НИК/oryza-sativa-genome-assembly.git)
 
-# Run the pipeline
+## Run the pipeline
 bash scripts/assembly_pipeline.sh
+
+## Pipeline Stages
+
+Scaffolding (RagTag): Organized contigs into chromosomes using a reference-guided approach (IRGSP-1.0).
+
+Organelle Sorting: Identified and separated chloroplast and mitochondrial genomes (nc_001320.1 and nc_011033.1).
+
+Gene Prediction (Augustus): Performed ab initio gene prediction with extrinsic hints specifically for Oryza sativa.
+
+## Future Directions
+- **Repeat Masking:** Refine the EDTA/RepeatMasker stage for better soft-masking before annotation.
+- **Functional Annotation:** Using BLAST/InterProScan to assign biological functions to the predicted genes.
+- **Synteny Analysis:** Comparing the *Kasalath* assembly with other rice cultivars.

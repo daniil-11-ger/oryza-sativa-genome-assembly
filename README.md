@@ -31,7 +31,7 @@ The k-mer analysis is a crucial step in plant genomics. It allows us to:
 ## How to Run
 bash
 # Clone the repository
-git clone [https://github.com/ВАШ_НИК/oryza-sativa-genome-assembly.git](https://github.com/ВАШ_НИК/oryza-sativa-genome-assembly.git)
+git clone https://github.com/daniil-11-ger/oryza-sativa-genome-assembly.git
 
 ## Run the pipeline
 bash scripts/assembly_pipeline.sh

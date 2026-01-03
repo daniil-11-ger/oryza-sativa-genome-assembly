@@ -26,10 +26,10 @@ The k-mer analysis is a crucial step in plant genomics. It allows us to:
 - Identify the level of duplication and repeats.
 - Optimize assembly parameters.
 
-> **Analogy:** If assembly is building a house, K-mer analysis is checking the quality and quantity of bricks before the first wall is even raised.
+**Analogy:** If assembly is building a house, K-mer analysis is checking the quality and quantity of bricks before the first wall is even raised.
 
 ## How to Run
-```bash
+bash
 # Clone the repository
 git clone [https://github.com/ВАШ_НИК/oryza-sativa-genome-assembly.git](https://github.com/ВАШ_НИК/oryza-sativa-genome-assembly.git)
 

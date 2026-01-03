@@ -5,36 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Genome Assembly Report | Oryza sativa</title>
     <style>
-        /* Modernized Styles based on your template */
+        /* Professional Science Styles */
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #2c3e50;
-            color: #ecf0f1;
+            color: #333;
             margin: 0;
             padding: 0;
         }
 
         #container {
             width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1100px;
+            margin: 20px auto;
             background: #ffffff;
-            color: #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 8px;
+            overflow: hidden;
             min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
         #header {
-            background-color: #000;
-            color: white;
-            padding: 20px;
+            background-color: #1a1a1a;
+            color: #3498db;
+            padding: 40px 20px;
             text-align: center;
+            border-bottom: 4px solid #3498db;
         }
 
-        /* Navbar from your code */
+        #header h1 { margin: 0; font-size: 2.5em; }
+        #header p { color: #bdc3c7; font-style: italic; }
+
         #navbar {
-            background-color: #1a1a1a;
-            overflow: hidden;
+            background-color: #34495e;
             display: flex;
             justify-content: center;
             list-style: none;
@@ -45,9 +48,10 @@
         #navbar li a {
             display: block;
             color: white;
-            padding: 15px 25px;
+            padding: 15px 30px;
             text-decoration: none;
             font-weight: bold;
+            transition: 0.3s;
         }
 
         #navbar li a:hover {
@@ -55,24 +59,27 @@
         }
 
         #content {
-            padding: 30px;
-            line-height: 1.6;
+            padding: 40px;
+            line-height: 1.8;
         }
 
-        h1 { color: #2980b9; border-bottom: 2px solid #3498db; }
-        h2 { color: #2c3e50; margin-top: 30px; }
+        h2 { 
+            color: #2980b9; 
+            border-left: 5px solid #3498db; 
+            padding-left: 15px;
+            margin-top: 40px;
+        }
 
-        /* Science Table Style */
         .stats-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 18px;
+            margin: 25px 0;
+            background: #fdfdfd;
         }
 
         .stats-table th, .stats-table td {
             border: 1px solid #ddd;
-            padding: 12px;
+            padding: 15px;
             text-align: left;
         }
 
@@ -81,18 +88,47 @@
             color: white;
         }
 
-        .stats-table tr:nth-child(even) { background-color: #f2f2f2; }
+        .stats-table tr:nth-child(even) { background-color: #f9f9f9; }
 
-        .feature-img {
-            float: right;
-            margin: 0 0 20px 20px;
-            border: 3px solid #ddd;
-            border-radius: 8px;
+        .plot-container {
+            text-align: center;
+            background: #f4f7f6;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px dashed #3498db;
         }
 
-        iframe {
-            margin: 10px;
+        .plot-placeholder {
+            max-width: 100%;
+            height: auto;
             border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .video-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #f4f7f6;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        .badge {
+            background: #27ae60;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -100,75 +136,83 @@
 
 <div id="container">
     <div id="header">
-        <h1>Oryza Sativa Genome Assembly Project</h1>
-        <p>Biotechnology Portfolio | Daniil Ger</p>
+        <h1>Oryza Sativa Genome Assembly <span class="badge">In Progress</span></h1>
+        <p>Scientific Project Report | Daniil Ger | Biotechnology Year 3</p>
     </div>
 
     <ul id="navbar">
-        <li><a href="#">Summary</a></li>
-        <li><a href="https://github.com/daniil-11-ger/oryza-sativa-genome-assembly">Source Code</a></li>
-        <li><a href="#">K-mer Analysis</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#kmer">K-mer Profiling</a></li>
+        <li><a href="#stats">Assembly Stats</a></li>
+        <li><a href="https://github.com/daniil-11-ger/biotech-gui-tools" target="_blank">Lab Tools</a></li>
     </ul>
 
     <div id="content">
-        <h1>Genomic Assembly Overview</h1>
-        
-        <p>
-            This project focuses on the high-fidelity <em>de novo</em> assembly of the <strong>Oryza sativa (Rice)</strong> genome. 
-            Using PacBio HiFi long-reads, we achieved a high-contiguity assembly that serves as a foundation for further 
-            functional genomic research and comparative analysis.
-        </p>
+        <section id="summary">
+            <h2>Genomic Overview</h2>
+            <p>
+                This research project utilizes <strong>PacBio HiFi (Long-Read)</strong> technology to reconstruct the complex eukaryotic genome of <em>Oryza sativa</em>. Rice is a critical model organism in plant biology, and high-quality <em>de novo</em> assemblies are essential for understanding climate adaptation and yield optimization.
+            </p>
+        </section>
 
-        <table class="stats-table">
-            <thead>
-                <tr>
-                    <th>Metric</th>
-                    <th>Value / Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Organism</strong></td>
-                    <td>Oryza sativa (Kasalath)</td>
-                </tr>
-                <tr>
-                    <td><strong>Data Type</strong></td>
-                    <td>PacBio HiFi (SRR35146894)</td>
-                </tr>
-                <tr>
-                    <td><strong>Assembler</strong></td>
-                    <td>Hifiasm (20 Threads)</td>
-                </tr>
-                <tr>
-                    <td><strong>Scaffolding</strong></td>
-                    <td>RagTag (Reference-guided)</td>
-                </tr>
-                <tr>
-                    <td><strong>Annotation</strong></td>
-                    <td>Augustus 3.5 (Gene Prediction)</td>
-                </tr>
-            </tbody>
-        </table>
+        <section id="kmer">
+            <h2>K-mer Profiling (Jellyfish)</h2>
+            <p>
+                Before assembly, we performed k-mer counting to estimate the genome size and check for heterozygosity. This step ensures the data quality is sufficient for <strong>Hifiasm</strong>.
+            </p>
+            
+            
 
-        <h2>Key Findings</h2>
-        <p>
-            The assembly successfully identified nuclear chromosomes along with complete organelle genomes. 
-            K-mer profiling (k=21, 51) was used to validate the genome size and heterozygosity levels prior to assembly.
-        </p>
+            <div class="plot-container">
+                <img src="https://via.placeholder.com/700x350/34495e/ffffff?text=K-mer+Analysis+Plot+(K=21)+-+Data+Processing+In+Progress" 
+                     alt="K-mer Distribution Plot" class="plot-placeholder">
+                <p><em>Figure 1: Estimated k-mer frequency distribution (Waiting for HPC processing results).</em></p>
+            </div>
+        </section>
 
-        <h2>Educational Resources</h2>
-        <p>Below are supplementary videos explaining the technologies used in this pipeline:</p>
-        
-        <iframe width="280" height="180" src="https://www.youtube.com/embed/ey75B26yqis" frameborder="0" allowfullscreen></iframe>
-        <iframe width="280" height="180" src="https://www.youtube.com/embed/4cbNROjV3Sg" frameborder="0" allowfullscreen></iframe>
-        <iframe width="280" height="180" src="https://www.youtube.com/embed/qpTtMKWNOWo" frameborder="0" allowfullscreen></iframe>
+        <section id="stats">
+            <h2>Primary Assembly Metrics</h2>
+            <table class="stats-table">
+                <thead>
+                    <tr>
+                        <th>Metric Type</th>
+                        <th>Target Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Expected Genome Size</strong></td>
+                        <td>~370 - 400 Mb</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contiguity (N50)</strong></td>
+                        <td>High (Optimized by Hifiasm)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Scaffolding Method</strong></td>
+                        <td>Reference-guided (RagTag / IRGSP-1.0)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Organelle Genomes</strong></td>
+                        <td>Separated (Chloroplast & Mitochondrion)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-        <h2>Sources & References</h2>
-        <p>
-            Data retrieved from NCBI SRA. Analysis performed using high-performance computing (HPC) environments.
-        </p>
+        <section id="resources">
+            <h2>Methodology Resources</h2>
+            <div class="video-section">
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/ey75B26yqis" frameborder="0" allowfullscreen></iframe>
+                <iframe width="320" height="180" src="https://www.youtube.com/embed/4cbNROjV3Sg" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <p>&copy; 2026 Daniil Ger | <a href="https://github.com/daniil-11-ger">GitHub Profile</a></p>
+        <p>Built with HTML5, CSS3, and passion for Bioinformatics.</p>
+    </footer>
 </div>
 
 </body>
